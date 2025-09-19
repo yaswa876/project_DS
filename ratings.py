@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 import os
 
-st.title("📚 Rate Our Teacher's Class")
-st.write("Please give your honest feedback and rating 💛")
+st.title(" Rate Our Janavi mam's Class")
+st.write("Please give your honest feedback and rating ")
 
 # Rating slider (1 to 5)
-rating = st.slider("How would you rate the class? ⭐", 1, 5, 3)
+rating = st.slider("How would you rate the class?", 1, 5, 3)
 
 # Text feedback
-feedback = st.text_area("Write your message for the teacher ✍️", "")
+feedback = st.text_area("Write your message for the teacher", "")
 
 # Submit button
 if st.button("Submit Feedback"):
@@ -26,4 +26,4 @@ if st.button("Submit Feedback"):
         else:
             df.to_csv("feedback.csv", index=False)
 
-        st.success("✅ Thank you for your feedback!")
+        st.success("Thank you for your message!")
